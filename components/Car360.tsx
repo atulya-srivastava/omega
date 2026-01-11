@@ -14,7 +14,7 @@ export default function Car360() {
   useEffect(() => {
     for (let i = 1; i <= TOTAL_IMAGES; i++) {
       const img = new window.Image();
-      img.src = `/car/car_${String(i).padStart(2, "0")}.jpg`;
+      img.src = `/car_360/car_${String(i).padStart(2, "0")}.jpg`;
     }
   }, []);
 
