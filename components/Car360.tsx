@@ -54,7 +54,7 @@ export default function Car360() {
       }}
     >
       <Image
-        src={`/car/car_${String(index + 1).padStart(2, "0")}.jpg`}
+        src={`/car_360/car_${String(index + 1).padStart(2, "0")}.jpg`}
         alt="360 car view"
         width={700}
         height={700}
