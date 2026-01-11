@@ -1,4 +1,5 @@
 "use client";
+import { Loader2 } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 
 const TOTAL = 25;
@@ -56,11 +57,11 @@ export default function Car360() {
   };
 
   return (
-    <div className="relative w-full h-screen flex items-center justify-center bg-gray-100">
+    <div className="relative w-full flex items-center justify-center">
       {!imagesLoaded && (
         <div className="absolute inset-0 flex items-center justify-center z-10">
-          <div className="text-center">
-            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-gray-900 mx-auto mb-4" />
+          <div className="text-center flex gap-2 items-center">
+            <Loader2 className="animate-spin h-5 w-5" />
             <p>Loading 360° view...</p>
           </div>
         </div>
@@ -84,12 +85,7 @@ export default function Car360() {
           style={{ opacity: imagesLoaded ? 1 : 0 }}
         />
       </div>
-
-      {imagesLoaded && (
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 text-sm text-gray-600">
-          Drag to rotate • {idx + 1}/{TOTAL}
-        </div>
-      )}
+      
     </div>
   );
 }
